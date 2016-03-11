@@ -34,3 +34,4 @@ toF = function() {
     setTimeout(function(){if(toV>=0)toF();}, toV=toV>0?toV-0.5:toV);
 }
 toF(toV = 500);
+//apply comments to understand code

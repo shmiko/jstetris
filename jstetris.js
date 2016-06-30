@@ -1,7 +1,12 @@
-var fs = "1111:01|01|01|01*011|110:010|011|001*110|011:001|011|010*111|010:01|11|01:010|111:10|11|10*11|11*010|010|011:111|100:11|01|01:001|111*01|01|11:100|111:11|10|10:111|001", now = [3,0], pos = [4,0];
-var gP = function(x,y) { return document.querySelector('[data-y="'+y+'"] [data-x="'+x+'"]'); };
+var fs = "1111:01|01|01|01*011|110:010|011|001*110|011:001|011|010*111|010:01|11|01:010|111:10|11|10*11|11*010|010|011:111|100:11|01|01:001|111*01|01|11:100|111:11|10|10:111|001", 
+now = [3,0], 
+pos = [4,0];
+var gP = function(x,y) { 
+    return document.querySelector('[data-y="'+y+'"] [data-x="'+x+'"]'); 
+};
 var draw = function(ch, cls) {
     var f = fs.split('*')[now[0]].split(':')[now[1]].split('|').map(function(a){return a.split('')});
+    console.log('f is:',f);
     for(var y=0; y<f.length; y++)
         for(var x=0; x<f[y].length; x++)
             if(f[y][x]=='1') {
